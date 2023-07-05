@@ -4,24 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import 'public/App.css'
-import localFont from 'next/font/local'
-
-const centrano2 = localFont({
-  src: [
-    {
-      path: './fonts/CentraNo2-Bold.ttf',
-      weight: '700'
-    },
-    {
-      path: './fonts/CentraNo2-Medium.ttf',
-      weight: '500'
-    },
-    {
-      path: './fonts/CentraNo2-Book.ttf',
-      weight: '400'
-    }
-  ],
-})
 
 
 export const metadata = {
@@ -35,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${centrano2.className}`}>
+    <html lang="en" >
       <body >{children}</body>
     </html>
   )

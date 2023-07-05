@@ -10,7 +10,11 @@ import Image from "next/image";
 
 export const Footer = () => {
     return (
-        <footer className="footer">
+        <footer className="footer"
+            style={{
+                backgroundImage: `url("/novian/assets/img/footer-bg.png")`,
+            }}
+        >
             <Container>
                 <Row className="align-items-center">
                     {/* <MailchimpForm /> */}
