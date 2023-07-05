@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Inter } from 'next/font/google'
 import 'swiper/css';
 import 'swiper/css/autoplay';
+import 'public/App.css'
 
 const inter = Inter({ subsets: ['latin'] })
 

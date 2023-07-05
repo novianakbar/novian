@@ -1,7 +1,6 @@
 
 import Image from 'next/image'
 import styles from './page.module.css'
-import '@/app/App.css'
 import { NavBar } from '@/components/Navbar'
 import { Banner } from '@/components/Banner'
 import { Skills } from '@/components/Skill'
