@@ -50,7 +50,9 @@ export const Banner = () => {
     }
 
     return (
-        <section className="banner" id="home">
+        <section className="banner" id="home" style={{
+            backgroundImage: `url("/novian/assets/img/banner-bg.png")`,
+        }}>
             <Container>
                 <Row className="aligh-items-center">
                     <Col xs={12} md={6} xl={7}>
