@@ -72,7 +72,7 @@ export const Contact = () => {
                                     <form
                                     // onSubmit={handleSubmit}
                                     >
-                                        <Row>
+                                        <Row className="p-2">
                                             <Col size={12} sm={6} className="px-1">
                                                 <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)} />
                                             </Col>

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import logo from '../assets/img/logo.svg';
+import logo from '../assets/img/n-logo-white.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
@@ -36,7 +36,13 @@ export const NavBar = () => {
         <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
             <Container>
                 <Navbar.Brand href="/">
-                    <Image src={logo} alt="logo" width={50} height={50} />
+                    <Image
+                        src={logo}
+                        alt="logo"
+                        width={100}
+                        height={100}
+                    // sizes="(max-width: 576px) 100vw, 576px"
+                    />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav">
                     <span className="navbar-toggler-icon"></span>
@@ -49,13 +55,13 @@ export const NavBar = () => {
                     </Nav>
                     <span className="navbar-text">
                         <div className="social-icon">
-                            <a href="#">
+                            <a href="https://www.linkedin.com/in/novian15/" target="_blank">
                                 <Image src={navIcon1} alt="" width={20} height={20} />
                             </a>
-                            <a href="#">
+                            <a href="https://facebook.com/ianakx007" target="_blank">
                                 <Image src={navIcon2} alt="" width={20} height={20} />
                             </a>
-                            <a href="#">
+                            <a href="https://instagram.com/akbar.novian" target="_blank">
                                 <Image src={navIcon3} alt="" width={20} height={20} />
                             </a>
                         </div>

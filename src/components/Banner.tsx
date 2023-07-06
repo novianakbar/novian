@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { ArrowRightCircle, ArrowDownCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import Image from "next/image";
@@ -13,7 +13,7 @@ export const Banner = () => {
     const [text, setText] = useState('');
     const [delta, setDelta] = useState(300 - Math.random() * 100);
     const [index, setIndex] = useState(1);
-    const toRotate = ["Web Developer", "Mobile Developer", "Network Engineer", "SysAdmin"];
+    const toRotate = ["Web Dev", "Mobile Dev", "Network Engineer", "SysAdmin"];
     const period = 2000;
 
     useEffect(() => {
@@ -62,6 +62,10 @@ export const Banner = () => {
                                     <span className="tagline">Welcome to my Portfolio</span>
                                     <h1>{`Hi! I'm Novian Akbar `}<span className="wrap">{text}</span></h1>
                                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <button >
+                                        <span>Download CV</span>
+                                        <ArrowDownCircle size={25} />
+                                    </button>
                                     <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
                                 </div>}
                         </TrackVisibility>
