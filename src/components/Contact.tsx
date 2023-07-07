@@ -11,6 +11,7 @@ interface IFormDetails {
     email: string;
     phone: string;
     message: string;
+    subject: string;
 
 }
 
@@ -20,11 +21,15 @@ export const Contact = () => {
         lastName: '',
         email: '',
         phone: '',
-        message: ''
+        message: '',
+        subject: ''
     }
     const [formDetails, setFormDetails] = useState<IFormDetails>(formInitialDetails);
     const [buttonText, setButtonText] = useState('Send');
-    const [status, setStatus] = useState({});
+    const [status, setStatus] = useState({
+        succes: false,
+        message: ''
+    });
 
     const onFormUpdate = (category: string, value: string) => {
         setFormDetails({
@@ -33,25 +38,25 @@ export const Contact = () => {
         })
     }
 
-    // const handleSubmit = async (e) => {
-    //     e.preventDefault();
-    //     setButtonText("Sending...");
-    //     let response = await fetch("http://localhost:5000/contact", {
-    //         method: "POST",
-    //         headers: {
-    //             "Content-Type": "application/json;charset=utf-8",
-    //         },
-    //         body: JSON.stringify(formDetails),
-    //     });
-    //     setButtonText("Send");
-    //     let result = await response.json();
-    //     setFormDetails(formInitialDetails);
-    //     if (result.code == 200) {
-    //         setStatus({ succes: true, message: 'Message sent successfully' });
-    //     } else {
-    //         setStatus({ succes: false, message: 'Something went wrong, please try again later.' });
-    //     }
-    // };
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setButtonText("Sending...");
+        let response = await fetch("https://gmailer.vercel.app/contact", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(formDetails),
+        });
+        setButtonText("Send");
+        let result = await response.json();
+        setFormDetails(formInitialDetails);
+        if (result.code == 200) {
+            setStatus({ succes: true, message: 'Message sent successfully' });
+        } else {
+            setStatus({ succes: false, message: 'Something went wrong, please try again later.' });
+        }
+    };
 
     return (
         <section className="contact" id="connect">
@@ -70,7 +75,7 @@ export const Contact = () => {
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h2>Get In Touch</h2>
                                     <form
-                                    // onSubmit={handleSubmit}
+                                        onSubmit={handleSubmit}
                                     >
                                         <Row className="p-2">
                                             <Col size={12} sm={6} className="px-1">
@@ -85,16 +90,19 @@ export const Contact = () => {
                                             <Col size={12} sm={6} className="px-1">
                                                 <input type="tel" value={formDetails.phone} placeholder="Phone No." onChange={(e) => onFormUpdate('phone', e.target.value)} />
                                             </Col>
+                                            <Col size={12} sm={12} className="px-1">
+                                                <input type="text" value={formDetails.subject} placeholder="Subject" onChange={(e) => onFormUpdate('phone', e.target.value)} />
+                                            </Col>
                                             <Col size={12} className="px-1">
                                                 <textarea rows={6} value={formDetails.message} placeholder="Message" onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+                                                {
+                                                    status?.message &&
+                                                    <Col>
+                                                        <p >{status.message}</p>
+                                                    </Col>
+                                                }
                                                 <button type="submit"><span>{buttonText}</span></button>
                                             </Col>
-                                            {/* {
-                                                status.message &&
-                                                <Col>
-                                                    <p className={status.success === false ? "danger" : "success"}>{status.message}</p>
-                                                </Col>
-                                            } */}
                                         </Row>
                                     </form>
                                 </div>}
