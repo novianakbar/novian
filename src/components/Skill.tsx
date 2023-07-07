@@ -1,13 +1,13 @@
 "use client"
 import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import laravel from "../assets/img/laravel.svg";
 import nextjs from "../assets/img/nextjs.svg";
 import nestjs from "../assets/img/nestjs.svg";
 import typescript from "../assets/img/ts.svg";
 import reactnative from "../assets/img/react-native.svg";
 import colorSharp from "../assets/img/color-sharp.png"
+import flutter from "../assets/img/flutter.svg";
+import kubernetes from "../assets/img/kubernetes.svg";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
@@ -104,9 +104,27 @@ export const Skills = () => {
                                         <div className="item">
                                             <div className="circle-image">
                                                 <Image src={meter1} alt="Image" />
+                                                <Image className="image-text" src={flutter} width={50} alt="Image" />
+                                            </div>
+                                            <h4>Flutter</h4>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="item">
+                                            <div className="circle-image">
+                                                <Image src={meter1} alt="Image" />
                                                 <Image className="image-text" src={typescript} width={60} alt="Image" />
                                             </div>
                                             <h4>TypeScript</h4>
+                                        </div>
+                                    </SwiperSlide>
+                                    <SwiperSlide>
+                                        <div className="item">
+                                            <div className="circle-image">
+                                                <Image src={meter1} alt="Image" />
+                                                <Image className="image-text" src={kubernetes} width={100} alt="Image-kube" />
+                                            </div>
+                                            <h4>Kubernetes</h4>
                                         </div>
                                     </SwiperSlide>
                                 </Swiper>
