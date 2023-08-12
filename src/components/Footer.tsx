@@ -8,6 +8,7 @@ import navIcon2 from "../assets/img/nav-icon2.svg";
 import navIcon3 from "../assets/img/nav-icon3.svg";
 import Image from "next/image";
 import { MailchimpForm } from "./MailchimpForm";
+import { Github } from "react-bootstrap-icons";
 
 export const Footer = () => {
     return (
@@ -32,10 +33,10 @@ export const Footer = () => {
                                     </a>
                                 </p>
                             </Col>
-                            <Col size={12} sm={6}>
+                            {/* <Col size={12} sm={6}>
                                 <p><span>Address:</span> Jl. KH Fakhrurroze No. 1,Samborejo, Tirto, Pekalongan, Indonesia</p>
 
-                            </Col>
+                            </Col> */}
                         </Row>
                     </Col>
                     <Col size={12} sm={6} className="text-center text-sm-end">
@@ -43,6 +44,9 @@ export const Footer = () => {
                             <a href="#"><Image src={navIcon1} alt="Icon" /></a>
                             <a href="#"><Image src={navIcon2} alt="Icon" /></a>
                             <a href="#"><Image src={navIcon3} alt="Icon" /></a>
+                            <a href="https://github.com/novianakbar" target="_blank">
+                                <Github size={20} color="white" />
+                            </a>
                         </div>
                         <p>Copyright 2023. All Rights Reserved</p>
                     </Col>

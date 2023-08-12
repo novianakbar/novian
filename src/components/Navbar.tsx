@@ -8,6 +8,7 @@ import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
 import Image from "next/image";
 import Link from "next/link";
+import { Github } from "react-bootstrap-icons";
 
 export const NavBar = () => {
 
@@ -63,6 +64,9 @@ export const NavBar = () => {
                             </a>
                             <a href="https://instagram.com/akbar.novian" target="_blank">
                                 <Image src={navIcon3} alt="" width={20} height={20} />
+                            </a>
+                            <a href="https://github.com/novianakbar" target="_blank">
+                                <Github size={20} color="white" />
                             </a>
                         </div>
                         <Link href="#connect" scroll={false}>
