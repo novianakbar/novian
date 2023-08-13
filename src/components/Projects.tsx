@@ -11,6 +11,8 @@ import projImg6 from "../assets/img/erlacloud.png";
 import gmailer from "../assets/img/gmailer.png";
 import nextcloud from "../assets/img/nextcloud.png";
 import mikhmon from "../assets/img/mikhmon.png";
+import mikrotikvpn from "../assets/img/mikrotikvpn.png";
+import mikrotikvpnremote from "../assets/img/mikrotikvpnremote.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -93,6 +95,8 @@ export const Projects = () => {
         },
     ] as IProjectCard[];
 
+    const mobileProjects = [] as IProjectCard[];
+
     const otherProjects = [
         {
             title: "Gmailer",
@@ -123,7 +127,26 @@ export const Projects = () => {
             projectDesc: "WHMCS Mikrotik Hotspot Monitor Provisioning Module is a module that is built with PHP and WHMCS. This module is used to provision Mikrotik Hotspot Monitor automatically and integrate with WHMCS.",
             projectStatus: "Finished",
             githubStatus: true,
-
+        },
+        {
+            title: "WHMCS Mikrotik VPN Tunnel Provisioning Module",
+            description: "Design & Development",
+            imgUrl: mikrotikvpn,
+            techStack: "PHP, WHMCS",
+            projectNames: "WHMCS Mikrotik VPN Tunnel Provisioning Module",
+            projectDesc: "WHMCS Mikrotik VPN Tunnel Provisioning Module is a module that is built with PHP and WHMCS. This module is used to provision Mikrotik VPN Tunnel accounts automatically and sell it as a product in WHMCS.",
+            projectStatus: "Finished",
+            githubStatus: true,
+        },
+        {
+            title: "WHMCS Mikrotik VPN Remote Provisioning Module",
+            description: "Design & Development",
+            imgUrl: mikrotikvpnremote,
+            techStack: "PHP, WHMCS",
+            projectNames: "WHMCS Mikrotik VPN Remote Provisioning Module",
+            projectDesc: "WHMCS Mikrotik VPN Remote Provisioning Module is a module that is built with PHP and WHMCS. This module is used to provision Mikrotik VPN Remote accounts automatically and sell it as a product in WHMCS.",
+            projectStatus: "Finished",
+            githubStatus: true,
         }
     ] as IProjectCard[];
 
@@ -136,7 +159,9 @@ export const Projects = () => {
                             {({ isVisible }) =>
                                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                                     <h2>Projects</h2>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p>
+                                        Here are some of my projects that I have.
+                                    </p>
                                     <Tab.Container id="projects-tabs" defaultActiveKey="first">
                                         <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                                             <Nav.Item>
@@ -167,7 +192,7 @@ export const Projects = () => {
                                             <Tab.Pane eventKey="second">
                                                 <Row>
                                                     {
-                                                        projects.map((project, index) => {
+                                                        mobileProjects.map((project, index) => {
                                                             return (
                                                                 <ProjectCard
                                                                     key={index}

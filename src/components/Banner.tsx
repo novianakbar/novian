@@ -12,7 +12,7 @@ export const Banner = () => {
 
     return (
         <section className="banner" id="home" style={{
-            backgroundImage: `url("/novian/assets/img/banner-bg.png")`,
+            backgroundImage: `url("/portfolio/assets/img/banner-bg.png")`,
         }}>
             <Container>
                 <Row className="aligh-items-center">
@@ -37,7 +37,9 @@ export const Banner = () => {
                                             }}
                                         />
                                     </span></h1>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                    <p>
+                                        Hello, I&lsquo;m Novian Akbar, a man with a passion for crafting innovative technological solutions. With a background in pursuing a bachelor&lsquo;s degree in Computer Engineering, I have seized opportunities to blend my knowledge in the realm of technology with creativity in the projects I have undertaken. I firmly believe that technology holds immense potential to transform the way we interact and navigate our daily lives, and I am enthusiastic about continually contributing to the realization of these goals.
+                                    </p>
                                     <button >
                                         <span>Download CV</span>
                                         <ArrowDownCircle size={25} />

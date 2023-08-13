@@ -23,7 +23,10 @@ export const Skills = () => {
                         <div className="skill-bx wow zoomIn">
                             {/* <h2>Skills</h2> */}
                             <h2>Tech Stack</h2>
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industrys standard dummy text.</p>
+                            <p>
+                                I have more than 2 years of experience in web development and 1 year in mobile development. I have worked with various technologies and frameworks. Here are some of the technologies and frameworks that I have worked with.
+
+                            </p>
                             <div className=" skill-slider">
                                 <Swiper
                                     autoHeight={true}

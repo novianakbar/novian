@@ -14,7 +14,7 @@ export const Footer = () => {
     return (
         <footer className="footer"
             style={{
-                backgroundImage: `url("/novian/assets/img/footer-bg.png")`,
+                backgroundImage: `url("/portfolio/assets/img/footer-bg.png")`,
             }}
         >
             <Container>
