@@ -13,6 +13,7 @@ import nextcloud from "../assets/img/nextcloud.png";
 import mikhmon from "../assets/img/mikhmon.png";
 import mikrotikvpn from "../assets/img/mikrotikvpn.png";
 import mikrotikvpnremote from "../assets/img/mikrotikvpnremote.png";
+import spp from "../assets/img/spp.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
@@ -54,16 +55,6 @@ export const Projects = () => {
             githubStatus: true,
         },
         {
-            title: "API Wilayah Indonesia",
-            description: "Design & Development",
-            imgUrl: projImg4,
-            techStack: "Express.Js JavaScript, MongoDB",
-            projectNames: "API Wilayah Indonesia",
-            projectDesc: "API Wilayah Indonesia is a web-based application that is built with Express.Js JavaScript and MongoDB. This application is an API that is used to get data about the regions, provinces, districts, and villages in Indonesia.",
-            projectStatus: "Finished",
-            githubStatus: true,
-        },
-        {
             title: "ExaPay",
             description: "Design & Development",
             imgUrl: projImg5,
@@ -72,6 +63,26 @@ export const Projects = () => {
             projectDesc: "ExaPay is a web-based application that is built with NextJS, TypeScript, TailwindCSS, and mySQL. This application is a payment gateway that is used to make payments for various types of transactions like game voucher, electricity, water, internet, and others.",
             projectStatus: "On Progress",
             githubStatus: false,
+        },
+        {
+            title: "Aplikasi Pembayaran SPP",
+            description: "Design & Development",
+            imgUrl: spp,
+            techStack: "Java Swing, MySQL",
+            projectNames: "APP Pembayaran SPP",
+            projectDesc: "This app is a desktop-based application that is built with Java Swing, and mySQL. This application is used to assist in making school bill payments.",
+            projectStatus: "Finished",
+            githubStatus: false,
+        },
+        {
+            title: "API Wilayah Indonesia",
+            description: "Design & Development",
+            imgUrl: projImg4,
+            techStack: "Express.Js JavaScript, MongoDB",
+            projectNames: "API Wilayah Indonesia",
+            projectDesc: "API Wilayah Indonesia is a web-based application that is built with Express.Js JavaScript and MongoDB. This application is an API that is used to get data about the regions, provinces, districts, and villages in Indonesia.",
+            projectStatus: "Finished",
+            githubStatus: true,
         },
         {
             title: "ChatGPT Web Clone",
